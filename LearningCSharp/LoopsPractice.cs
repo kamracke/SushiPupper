@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Exercises.Loops
 {
-    public class LoopsPractice
+    public static class LoopsPractice
     {
-        public void Practice1()
+        public static void Practice1()
         {
             var count = 0;
             for (var i = 1; i <= 100; i++)
@@ -19,23 +19,24 @@ namespace Exercises.Loops
             Console.WriteLine("There are {0} numbers divisible by 4 between 1 and 100.", count);
         }
 
-        public void Practice2()
+        public static void Practice2()
         {
             var sum = 0;
-            while (true)
+            var stayInLoop = true;
+            while (stayInLoop)
             {
                 Console.Write("Enter a number (or 'ok' to exit): ");
                 var input = Console.ReadLine();
 
                 if (input.ToLower() == "ok")
-                    break;
-
-                sum += Convert.ToInt32(input);
+                    stayInLoop = false;
+                else
+                    sum += Convert.ToInt32(input);
             }
             Console.WriteLine("Sum of all numbers is: " + sum);
         }
 
-        public void Practice3()
+        public static void Practice3()
         {
             Console.Write("Enter a number: ");
             var number = Convert.ToInt32(Console.ReadLine());
@@ -47,7 +48,7 @@ namespace Exercises.Loops
             Console.WriteLine("{0}! = {1}", number, factorial);
         }
 
-        public void Practice4()
+        public static void Practice4()
         {
             var number = new Random().Next(1, 10);
 
@@ -66,7 +67,7 @@ namespace Exercises.Loops
             Console.WriteLine("You lost!");
         }
 
-        public void Practice5()
+        public static void Practice5()
         {
             Console.Write("Enter comma separated numbers: ");
             var input = Console.ReadLine();
