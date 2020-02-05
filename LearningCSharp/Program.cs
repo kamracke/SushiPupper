@@ -14,7 +14,7 @@ namespace LearningCSharp
         {
 
            
-            ConditionalsPractice.Practice4();
+            LoopsPractice.Kelsey1();
 
 
             //var sum = 0;

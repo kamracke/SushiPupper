@@ -8,6 +8,34 @@ namespace Exercises.Loops
 {
     public static class LoopsPractice
     {
+
+        public static void Kelsey1()
+        {
+            var youWon = true;
+            for (var i = 0; i < 4; i++)
+            {
+                Console.Write("Enter a number between 1 and 5: ");
+                var input = Console.ReadLine();
+                var number = Convert.ToInt32(input);
+                if (number >= 1 && number <= 5)
+                { 
+                    Console.WriteLine("That is correct!"); 
+                    youWon = true; i = 4;
+                }  
+                else
+                {
+                    Console.WriteLine("Nope. Try again.");
+                    youWon = false;
+                }
+                    
+            }
+            if (youWon == false)
+                Console.WriteLine("Used up all your tries, too bad.");
+            else
+                Console.WriteLine("You Win!");
+
+        }
+
         public static void Practice1()
         {
             var count = 0;
@@ -52,7 +80,6 @@ namespace Exercises.Loops
         {
             var number = new Random().Next(1, 10);
 
-            Console.WriteLine("Secret is " + number);
             for (var i = 0; i < 4; i++)
             {
                 Console.Write("Guess the secret number: ");
@@ -65,6 +92,7 @@ namespace Exercises.Loops
                 }
             }
             Console.WriteLine("You lost!");
+            Console.WriteLine("Secret is " + number);
         }
 
         public static void Practice5()
