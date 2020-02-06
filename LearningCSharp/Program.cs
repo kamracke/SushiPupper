@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace LearningCSharp
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
 
            
-            LoopsPractice.Kelsey1();
+            ListPractice.Exercise5();
 
 
             //var sum = 0;

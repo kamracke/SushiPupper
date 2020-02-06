@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConditionalsPractice.cs" />
+    <Compile Include="ListPractice.cs" />
     <Compile Include="LoopsPractice.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
