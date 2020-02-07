@@ -14,7 +14,7 @@ namespace LearningCSharp
         {
 
            
-            ListPractice.Exercise5();
+            StringsPractice.Exercise5();
 
 
             //var sum = 0;
