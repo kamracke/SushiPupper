@@ -11,7 +11,7 @@ namespace Exercises.Loops
 
         public static void Kelsey1()
         {
-            var youWon = true;
+            
             for (var i = 0; i < 4; i++)
             {
                 Console.Write("Enter a number between 1 and 5: ");
@@ -19,20 +19,18 @@ namespace Exercises.Loops
                 var number = Convert.ToInt32(input);
                 if (number >= 1 && number <= 5)
                 { 
-                    Console.WriteLine("That is correct!"); 
-                    youWon = true; i = 4;
+                    Console.WriteLine("That is correct! You Win!");
+                    return;
                 }  
                 else
                 {
                     Console.WriteLine("Nope. Try again.");
-                    youWon = false;
                 }
                     
             }
-            if (youWon == false)
+          
                 Console.WriteLine("Used up all your tries, too bad.");
-            else
-                Console.WriteLine("You Win!");
+            
 
         }
 
@@ -89,6 +87,16 @@ namespace Exercises.Loops
                 {
                     Console.WriteLine("You won!");
                     return;
+                }
+
+                else if (guess < number)
+                {
+                    Console.WriteLine("Nope, guess higher.");
+                }
+
+                else
+                {
+                    Console.WriteLine("Nope, guess lower.");
                 }
             }
             Console.WriteLine("You lost!");

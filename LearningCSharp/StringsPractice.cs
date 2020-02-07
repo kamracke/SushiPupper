@@ -92,7 +92,7 @@ namespace LearningCSharp
             }
             catch (Exception)
             {
-                Console.WriteLine("Invalid time");
+                Console.WriteLine("Exception: Invalid time");
             }
         }
 
@@ -123,14 +123,14 @@ namespace LearningCSharp
             var input = Console.ReadLine().ToLower();
 
             var vowels = new List<char>(new char[] { 'a', 'e', 'o', 'u', 'i' });
-            var vowelsCount = 0;
+            var ConsonantsCount = 0;
             foreach (var character in input)
             {
-                if (vowels.Contains(character))
-                    vowelsCount++;
+                if (!vowels.Contains(character))
+                    ConsonantsCount++;
             }
 
-            Console.WriteLine(vowelsCount);
+            Console.WriteLine(ConsonantsCount);
         }
     }
 }

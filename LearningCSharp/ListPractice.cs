@@ -23,7 +23,7 @@ namespace LearningCSharp
             }
 
             if (names.Count > 2)
-                Console.WriteLine("{0}, {1} and {2} others like your post.", names[0], names[1], names.Count - 2);
+                Console.WriteLine($"{names[0]}, {names[1]} and {names.Count - 2} others like your post.");//, names[0], names[1], names.Count - 2);
             else if (names.Count == 2)
                 Console.WriteLine("{0} and {1} like your post.", names[0], names[1]);
             else if (names.Count == 1)
@@ -100,7 +100,7 @@ namespace LearningCSharp
             string[] elements;
             while (true)
             {
-                Console.Write("Enter a list of comma=separated numbers: ");
+                Console.Write("Enter a list of comma-separated numbers: ");
                 var input = Console.ReadLine();
 
                 if (!String.IsNullOrWhiteSpace(input))
@@ -121,7 +121,7 @@ namespace LearningCSharp
             var smallests = new List<int>();
             while (smallests.Count < 3)
             {
-                var min = numbers[0];
+                var min = numbers.First();
                 foreach (var number in numbers)
                 {
                     if (number < min)
