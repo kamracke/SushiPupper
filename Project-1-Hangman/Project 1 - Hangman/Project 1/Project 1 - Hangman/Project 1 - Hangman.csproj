@@ -4,13 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{435F0D22-1549-4374-8247-86954802E7F5}</ProjectGuid>
+    <ProjectGuid>{F24F8A15-6FCD-46C4-8859-BB54C5E103A0}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>LearningCSharp</RootNamespace>
-    <AssemblyName>LearningCSharp</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <RootNamespace>Project_1___Hangman</RootNamespace>
+    <AssemblyName>Project 1 - Hangman</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <Deterministic>true</Deterministic>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -42,10 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArraysPractice.cs" />
-    <Compile Include="ConditionalsPractice.cs" />
-    <Compile Include="LoopsPractice.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="EntryPoint.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

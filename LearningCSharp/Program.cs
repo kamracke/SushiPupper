@@ -3,25 +3,37 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Exercises.Loops;
 
 namespace LearningCSharp
 {
     class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            var sum = 0;
-            while (true)
-            {
-                Console.Write("Enter a number (or 'ok' to exit): ");
-                var input = Console.ReadLine();
+            LoopsPractice.Practice1();
 
-                if (input.ToLower() == "ok")
-                    break;
 
-                sum += Convert.ToInt32(input);
-            }
-            Console.WriteLine("Sum of all numbers is: " + sum);
+            ArraysPractice.Arp6();
+
+
+
+
+
+
+
+            //var sum = 0;
+            //while (true)
+            //{
+            //    Console.Write("Enter a number (or 'ok' to exit): ");
+            //    var input = Console.ReadLine();
+
+            //    if (input.ToLower() == "ok")
+            //        break;
+
+            //    sum += Convert.ToInt32(input);
+            //}
+            //Console.WriteLine("Sum of all numbers is: " + sum);
         }
     }
 }
