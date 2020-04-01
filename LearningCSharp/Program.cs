@@ -1,25 +1,20 @@
-﻿using System;
+﻿using Exercises.Loops;
+using Exercises.Conditionals;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Exercises.Loops;
 
 namespace LearningCSharp
 {
-    class Program
+    public class Program
     {
-        public static void Main(string[] args)
+        static void Main(string[] args)
         {
-            LoopsPractice.Practice1();
 
-
-            ArraysPractice.Arp6();
-
-
-
-
-
+           
+            StringsPractice.Exercise5();
 
 
             //var sum = 0;

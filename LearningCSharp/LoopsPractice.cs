@@ -6,8 +6,34 @@ using System.Threading.Tasks;
 
 namespace Exercises.Loops
 {
-    public class LoopsPractice
+    public static class LoopsPractice
     {
+
+        public static void Kelsey1()
+        {
+            
+            for (var i = 0; i < 4; i++)
+            {
+                Console.Write("Enter a number between 1 and 5: ");
+                var input = Console.ReadLine();
+                var number = Convert.ToInt32(input);
+                if (number >= 1 && number <= 5)
+                { 
+                    Console.WriteLine("That is correct! You Win!");
+                    return;
+                }  
+                else
+                {
+                    Console.WriteLine("Nope. Try again.");
+                }
+                    
+            }
+          
+                Console.WriteLine("Used up all your tries, too bad.");
+            
+
+        }
+
         public static void Practice1()
         {
             var count = 0;
@@ -22,15 +48,16 @@ namespace Exercises.Loops
         public static void Practice2()
         {
             var sum = 0;
-            while (true)
+            var stayInLoop = true;
+            while (stayInLoop)
             {
                 Console.Write("Enter a number (or 'ok' to exit): ");
                 var input = Console.ReadLine();
 
                 if (input.ToLower() == "ok")
-                    break;
-
-                sum += Convert.ToInt32(input);
+                    stayInLoop = false;
+                else
+                    sum += Convert.ToInt32(input);
             }
             Console.WriteLine("Sum of all numbers is: " + sum);
         }
@@ -51,7 +78,6 @@ namespace Exercises.Loops
         {
             var number = new Random().Next(1, 10);
 
-            Console.WriteLine("Secret is " + number);
             for (var i = 0; i < 4; i++)
             {
                 Console.Write("Guess the secret number: ");
@@ -62,8 +88,19 @@ namespace Exercises.Loops
                     Console.WriteLine("You won!");
                     return;
                 }
+
+                else if (guess < number)
+                {
+                    Console.WriteLine("Nope, guess higher.");
+                }
+
+                else
+                {
+                    Console.WriteLine("Nope, guess lower.");
+                }
             }
             Console.WriteLine("You lost!");
+            Console.WriteLine("Secret is " + number);
         }
 
         public static void Practice5()

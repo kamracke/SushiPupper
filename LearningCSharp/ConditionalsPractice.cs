@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Exercises.Conditionals
 {
-    class ConditionalsPractice
+    public static class ConditionalsPractice
     {
-        public void Conditional1()
+        public static void Conditional1()
         {
             Console.WriteLine("How many dogs do you have?");
             var input = Console.ReadLine();
@@ -21,7 +21,7 @@ namespace Exercises.Conditionals
                 Console.WriteLine("You may have too many doggos. :(");
         }
 
-        public void Practice1()
+        public static void Practice1()
         {
             Console.Write("Enter a number between 1 and 20: ");
             var input = Console.ReadLine();
@@ -32,7 +32,7 @@ namespace Exercises.Conditionals
                 Console.WriteLine("Not Cool. *sad face*");
         }
 
-        public void Practice2()
+        public static void Practice2()
         {
             Console.Write("Enter a number: ");
             var number1 = Convert.ToInt32(Console.ReadLine());
@@ -44,7 +44,7 @@ namespace Exercises.Conditionals
             Console.WriteLine("Min is: " + min);
         }
 
-        public void Practice3()
+        public static void Practice3()
         {
             Console.Write("Enter the width: ");
             var width = Convert.ToInt32(Console.ReadLine());
@@ -61,7 +61,7 @@ namespace Exercises.Conditionals
             Portrait
         }
 
-        public void Practice4()
+        public static void Practice4()
         {
             Console.Write("Enter speed limit: ");
             var speedlimit = Convert.ToInt32(Console.ReadLine());
