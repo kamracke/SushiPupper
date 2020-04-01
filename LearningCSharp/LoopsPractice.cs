@@ -8,33 +8,7 @@ namespace Exercises.Loops
 {
     public static class LoopsPractice
     {
-
-        public static void Kelsey1()
-        {
-            
-            for (var i = 0; i < 4; i++)
-            {
-                Console.Write("Enter a number between 1 and 5: ");
-                var input = Console.ReadLine();
-                var number = Convert.ToInt32(input);
-                if (number >= 1 && number <= 5)
-                { 
-                    Console.WriteLine("That is correct! You Win!");
-                    return;
-                }  
-                else
-                {
-                    Console.WriteLine("Nope. Try again.");
-                }
-                    
-            }
-          
-                Console.WriteLine("Used up all your tries, too bad.");
-            
-
-        }
-
-        public static void Practice1()
+        public void Practice1()
         {
             var count = 0;
             for (var i = 1; i <= 100; i++)
