@@ -244,35 +244,174 @@ namespace LearningCSharp
         //}
 
 
-        public static void Arp6()
-        {
-            Console.Write("Please provide some integers separated by spaces: ");
-            int[] intArray = StringToIntArray(Console.ReadLine());
-            int tempVar;
-            int currentMin = 0;
+        //public static void Arp6()
+        //{
+        //    Console.Write("Please provide some integers separated by spaces: ");
+        //    int[] intArray = StringToIntArray(Console.ReadLine());
+        //    int tempVar;
+        //    int currentMin = 0;
 
-            for (int j = 0; j < intArray.Length; j++)
-            {
-                currentMin = j;
+        //    for (int j = 0; j < intArray.Length; j++)
+        //    {
+        //        currentMin = j;
 
-                for (int i = j; i < intArray.Length; i++)
-                {
-                    if (intArray[currentMin] > intArray[i])
-                    {
-                        currentMin = i;
-                    }
-                }
+        //        for (int i = j; i < intArray.Length; i++)
+        //        {
+        //            if (intArray[currentMin] > intArray[i])
+        //            {
+        //                currentMin = i;
+        //            }
+        //        }
 
-                tempVar = intArray[j];
-                intArray[j] = intArray[currentMin];
-                intArray[currentMin] = tempVar;
-            }
+        //        tempVar = intArray[j];
+        //        intArray[j] = intArray[currentMin];
+        //        intArray[currentMin] = tempVar;
+        //    }
 
-            foreach (var item in intArray)
-            {
-                Console.WriteLine(item);
-            }
-        }
+        //    foreach (var item in intArray)
+        //    {
+        //        Console.WriteLine(item);
+        //    }
+        //}
+
+
+        //public static void Arp7()
+        //{
+        //    Console.Write("Please provide a list of integers separated by spaces: ");
+        //    string array = Console.ReadLine();
+        //    int[] intArray = StringToIntArray(array);
+
+        //    ArraySort(intArray);
+
+        //    int theValue = 0;
+        //    int occurance = 0;
+        //    int tempOccurance = 1;
+
+        //    for (int i = 0; i < intArray.Length - 1; i++)
+        //    {
+        //        if (intArray[i] == intArray[i + 1])
+        //        {
+        //            tempOccurance++;
+        //        }
+        //        else
+        //        {
+        //            tempOccurance = 1;
+        //        }
+        //        if (tempOccurance > occurance)
+        //        {
+        //            occurance = tempOccurance;
+        //            theValue = intArray[i];
+        //        }
+        //    }
+
+        //    Console.WriteLine("The integer that appears in your list most frequently is: " + theValue);
+        //}
+
+        //private static void ArraySort(int[] intArray)
+        //{
+        //    int tempVar;
+        //    int currentMin = 0;
+
+        //    for (int j = 0; j < intArray.Length; j++)
+        //    {
+        //        currentMin = j;
+        //        for (int i = j; i < intArray.Length; i++)
+        //        {
+        //            if (intArray[currentMin] > intArray[i])
+        //            {
+        //                currentMin = i;
+        //            }
+        //        }
+        //        tempVar = intArray[j];
+        //        intArray[j] = intArray[currentMin];
+        //        intArray[currentMin] = tempVar;
+        //    }
+        //}
+
+        //public static void Arp8()
+        //{
+        //    Console.Write("Please provide a list of integers separated by spaces: ");
+        //    int[] intArray = StringToIntArray(Console.ReadLine());
+
+        //    Console.Write("Please provide an integer that will be the sum of a subarray: ");
+        //    int S = Convert.ToInt32(Console.ReadLine());
+
+        //    int startIndex, endIndex, sum;
+        //    startIndex = endIndex = sum = 0;
+
+        //    bool solved = false;
+
+        //    for (int i = 0; i < intArray.Length; i++)
+        //    {
+        //        if (solved == false)
+        //        {
+        //            for (int j = i; j < intArray.Length; j++)
+        //            {
+        //                endIndex = j;
+        //                sum = sum + intArray[j];
+
+        //                if (sum == S)
+        //                {
+        //                    solved = true;
+        //                    break;
+        //                }
+        //            }
+        //        }
+        //        else
+        //        {
+        //            break;
+        //        }
+
+        //        sum = 0;
+        //        startIndex = i;
+        //    }
+
+        //    Console.WriteLine("The sum is between elements {0} and {1}.", startIndex, endIndex);
+
+        //    for (int i = startIndex; i <= endIndex; i++)
+        //    {
+        //        Console.Write("{0} ", intArray[i]);
+        //    }
+        //}
+
+        //public static void Arp9()
+        //{
+        //    Console.Write("Please provide integers separated by spaces. If they are not sorted, they will be sorted: ");
+        //    int[] intArray = StringToIntArray(Console.ReadLine());
+
+        //    Console.Write("Please indicate the index of the integer/element you are trying to find: ");
+        //    int lookFor = Convert.ToInt32(Console.ReadLine());
+
+        //    Array.Sort(intArray);
+
+        //    BinSearch(intArray, 0, intArray.Length, lookFor);
+        //}
+
+        //public static void BinSearch(int[] intArray, int startIndex, int endIndex, int lookFor)
+        //{
+        //    if (endIndex <= startIndex)
+        //    {
+        //        Console.WriteLine("Not found.");
+        //        return;
+        //    }
+        //    else
+        //    {
+        //        int middle = startIndex + (endIndex - startIndex) / 2;
+        //        if (lookFor < intArray[middle])
+        //        {
+        //            BinSearch(intArray, startIndex, middle - 1, lookFor);
+        //        }
+        //        else if (lookFor > intArray[middle])
+        //        {
+        //            BinSearch(intArray, middle + 1, endIndex, lookFor);
+        //        }
+        //        else
+        //        {
+        //            Console.WriteLine("{0} is at position {1} counting from 0.", lookFor, middle);
+        //            return;
+        //        }
+        //    }
+        //}
 
 
         private static int[] StringToIntArray(string array)
@@ -281,5 +420,7 @@ namespace LearningCSharp
 
             return arrayFromString;
         }
+
+        
     }
 }

@@ -8,7 +8,7 @@ namespace Exercises.Loops
 {
     public static class LoopsPractice
     {
-        public void Practice1()
+        public static void Practice1()
         {
             var count = 0;
             for (var i = 1; i <= 100; i++)
