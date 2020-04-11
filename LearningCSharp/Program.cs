@@ -13,8 +13,8 @@ namespace LearningCSharp
         static void Main(string[] args)
         {
 
-           
-            ArraysPractice.Arp9();
+
+            MethodsPractice.M4();
 
 
             //var sum = 0;
