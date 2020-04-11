@@ -374,44 +374,44 @@ namespace LearningCSharp
         //    }
         //}
 
-        //public static void Arp9()
-        //{
-        //    Console.Write("Please provide integers separated by spaces. If they are not sorted, they will be sorted: ");
-        //    int[] intArray = StringToIntArray(Console.ReadLine());
+        public static void Arp9()
+        {
+            Console.Write("Please provide integers separated by spaces. If they are not sorted, they will be sorted: ");
+            int[] intArray = StringToIntArray(Console.ReadLine());
 
-        //    Console.Write("Please indicate the index of the integer/element you are trying to find: ");
-        //    int lookFor = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Please indicate the index of the integer/element you are trying to find: ");
+            int lookFor = Convert.ToInt32(Console.ReadLine());
 
-        //    Array.Sort(intArray);
+            Array.Sort(intArray);
 
-        //    BinSearch(intArray, 0, intArray.Length, lookFor);
-        //}
+            BinSearch(intArray, 0, intArray.Length - 1, lookFor);
+        }
 
-        //public static void BinSearch(int[] intArray, int startIndex, int endIndex, int lookFor)
-        //{
-        //    if (endIndex <= startIndex)
-        //    {
-        //        Console.WriteLine("Not found.");
-        //        return;
-        //    }
-        //    else
-        //    {
-        //        int middle = startIndex + (endIndex - startIndex) / 2;
-        //        if (lookFor < intArray[middle])
-        //        {
-        //            BinSearch(intArray, startIndex, middle - 1, lookFor);
-        //        }
-        //        else if (lookFor > intArray[middle])
-        //        {
-        //            BinSearch(intArray, middle + 1, endIndex, lookFor);
-        //        }
-        //        else
-        //        {
-        //            Console.WriteLine("{0} is at position {1} counting from 0.", lookFor, middle);
-        //            return;
-        //        }
-        //    }
-        //}
+        public static void BinSearch(int[] intArray, int startIndex, int endIndex, int lookFor)
+        {
+            if (endIndex < startIndex)
+            {
+                Console.WriteLine("Not found.");
+                return;
+            }
+            else
+            {
+                int middle = startIndex + (endIndex - startIndex) / 2;
+                if (lookFor < intArray[middle])
+                {
+                    BinSearch(intArray, startIndex, middle - 1, lookFor);
+                }
+                else if (lookFor > intArray[middle])
+                {
+                    BinSearch(intArray, middle + 1, endIndex, lookFor);
+                }
+                else
+                {
+                    Console.WriteLine("{0} is at position {1} counting from 0.", lookFor, middle);
+                    return;
+                }
+            }
+        }
 
 
         private static int[] StringToIntArray(string array)
