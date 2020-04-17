@@ -14,7 +14,7 @@ namespace LearningCSharp
         {
 
 
-            MethodsPractice.M3();
+            MoreStringsPractice.StringFive();
 
 
             //var sum = 0;
