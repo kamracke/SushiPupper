@@ -8,16 +8,33 @@ class EntryPoint
 {
     static void Main()
     {
+        //Ask for list of numbers
         Console.Write("Please input your array: ");
+
+        //Convert input into an array
         int[] intArray = StringToIntArray(Console.ReadLine());
 
+        //ask for number to search for
         Console.Write("Which element do you want to check? ");
+        // reading the input
         int element = Convert.ToInt32(Console.ReadLine());
 
-        CheckElementInArray(intArray, element); //takes two arguments, array of type int containing and variable of type int specifying which element we want to check
+        //search the array 
+        int times = CountElementInArray(intArray, element); //takes two arguments, array of type int containing and variable of type int specifying which element we want to check
+
+        //output the result
+        Console.WriteLine("The element {0} appears {1} times in the array.", element, times);
     }
 
-    static void CheckElementInArray(int[] intArray, int element)
+    static int[] StringToIntArray(string array)
+    {
+        int[] arrayFromString = array.Split(' ')
+                                     .Select(element => int.Parse(element))
+                                     .ToArray();
+        return arrayFromString;
+    }
+
+    static int CountElementInArray(int[] intArray, int element)
     {
         int counter = 0;
 
@@ -29,14 +46,7 @@ class EntryPoint
             }
         }
 
-        Console.WriteLine("The element {0} appears {1} times in the array.", element, counter);
-    }
-    static int[] StringToIntArray(string array)
-    {
-        int[] arrayFromString = array.Split(' ')
-                                     .Select(element => int.Parse(element))
-                                     .ToArray();
-        return arrayFromString;
+        return counter;
     }
 }
 

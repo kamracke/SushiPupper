@@ -14,7 +14,7 @@ namespace LearningCSharp
         {
 
 
-            MoreStringsPractice.StringFive();
+            MoreStringsPractice.StringFourTakeTwo();
 
 
             //var sum = 0;

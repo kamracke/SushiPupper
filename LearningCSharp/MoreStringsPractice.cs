@@ -93,92 +93,68 @@ namespace LearningCSharp
         //    }
 
         //    Console.WriteLine("The word {0} is contained {1} time(s) in your sentence.", wordToCheck, wordCounter);
+
+        //}
+
+        public static void StringFour()
+        {
+            StringBuilder sb = new StringBuilder();
+            string input = "";
+            bool stringLengthOk = true;
+
+            while (stringLengthOk)
+            {
+                Console.Write("Please provide a word with no more than 20 characters: ");
+                input = Console.ReadLine();
+
+                if (input.Length > 20)
+                {
+                    stringLengthOk = true;
+                    Console.WriteLine("Please provide a new word or phrase with a maximum of 20 characters!");
+                    Thread.Sleep(2000);
+                    Console.Clear();
+                }
+                else
+                {
+                    stringLengthOk = false;
+                }
+            }
+
+            sb.Append(input);
+
+            if (input.Length < 20)
+            {
+                for (int i = input.Length - 1; i < 20; i++)
+                {
+                    sb.Append("*");
+                }
+            }
+
+            Console.WriteLine(sb);
+        }
+
+        public static void StringFourTakeTwo()
+        {
+            StringBuilder sb = new StringBuilder();
+            string input = "";
+
+            Console.Write("Please provide a word or phrase: ");
+            input = Console.ReadLine();
+
+            sb.Append(input);
+
             
-        //}
+            sb = sb.Remove(20, sb.Length - 20);
+            
+            while (sb.Length < 20)
+            {
+                sb.Append("*");
+            }
+           
+                
+            Console.WriteLine(sb);
 
-        //public static void StringFour()
-        //{
-        //    StringBuilder sb = new StringBuilder();
-        //    string input = "";
-        //    bool stringLengthOk = true;
-
-        //    while (stringLengthOk)
-        //    {
-        //        Console.Write("Please provide a word with no more than 20 characters: ");
-        //        input = Console.ReadLine();
-
-        //        if (input.Length > 20)
-        //        {
-        //            stringLengthOk = true;
-        //            Console.WriteLine("Please provide a new word or phrase with a maximum of 20 characters!");
-        //            Thread.Sleep(2000);
-        //            Console.Clear();
-        //        }
-        //        else
-        //        {
-        //            stringLengthOk = false;
-        //        }
-        //    }
-
-        //    sb.Append(input);
-
-        //    if (input.Length < 20)
-        //    {
-        //        for (int i = input.Length - 1; i < 20; i++)
-        //        {
-        //            sb.Append("*");
-        //        }
-        //    }
-
-        //    Console.WriteLine(sb);
-        //}
-
-        //public static void StringFourTakeTwo()
-        //{
-        //    StringBuilder sb = new StringBuilder();
-        //    string input = "";
-        //    //bool stringLengthOk = true;
-
-        //    Console.Write("Please provide a word or phrase: ");
-        //    input = Console.ReadLine();
-
-        //    //while (stringLengthOk)
-        //    //{
-        //    //    Console.Write("Please provide a word with no more than 20 characters: ");
-        //    //    input = Console.ReadLine();
-
-        //    //    if (input.Length > 20)
-        //    //    {
-        //    //        stringLengthOk = true;
-        //    //        Console.WriteLine("Please provide a new word or phrase with a maximum of 20 characters!");
-        //    //        Thread.Sleep(2000);
-        //    //        Console.Clear();
-        //    //    }
-        //    //    else
-        //    //    {
-        //    //        stringLengthOk = false;
-        //    //    }
-        //    //}
-
-        //    sb.Append(input);
-
-        //    if (input.Length < 20)
-        //    {
-        //        for (int i = input.Length - 1; i < 20; i++)
-        //        {
-        //            sb.Append("*");
-        //        }
-        //        Console.WriteLine(sb);
-        //        Thread.Sleep(5000);
-        //    }
-        //    else
-        //    {
-        //        sb = sb.SubString(0, 20);
-        //        Console.WriteLine(sb);
-        //        Thread.Sleep(5000);
-        //    }
-
-        //}
+        }
 
         public static void StringFive()
         {
