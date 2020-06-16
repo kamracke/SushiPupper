@@ -13,8 +13,25 @@ namespace LearningCSharp
         static void Main(string[] args)
         {
 
+            var Thing = new PropertiesClass("Daniel", 6);
 
-            MoreStringsPractice.StringFourTakeTwo();
+            Console.WriteLine(Thing.Word);
+
+            Thing.SetWord("");
+
+            Console.WriteLine(Thing.Word);
+
+
+
+
+
+
+
+
+
+
+
+            //MoreStringsPractice.StringFourTakeTwo();
 
 
             //var sum = 0;
